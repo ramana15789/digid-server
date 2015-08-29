@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var Form = require("../models/form.js").model;
+var UserResponse = require("../models/formResponse.js").model;
 
 router.get('/', function (req, res, next) {
     var query = req.query;
     console.log(query);
 
-    Form.findOne(query, function (err, fields) {
+    UserResponse.findOne(query, function (err, fields) {
         if (err) {
             throw err;
         }
@@ -17,7 +17,7 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res) {
     console.log(req);
-    var field = new Form(req.body);
+    var field = new UserResponse(req.body);
     field.save(function (err) {
         if (err) {
             console.log(err);
@@ -29,7 +29,7 @@ router.post('/', function (req, res) {
 
 router.delete('/', function (req, res) {
     console.log(req.query)
-    Form.findOneAndRemove(req.query, function (delErr) {
+    UserResponse.findOneAndRemove(req.query, function (delErr) {
         if (delErr) {
             console.log(delErr);
         }

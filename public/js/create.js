@@ -7,10 +7,10 @@ var sampleForm = {
 }
 
 function fetchFroms() {
-    var name = new Form(sampleForm)
+    var name = new UserResponse(sampleForm)
     sampleForm.key = age;
 
-    var age = new Form(sampleForm)
+    var age = new UserResponse(sampleForm)
     return [name, age];
 }
 

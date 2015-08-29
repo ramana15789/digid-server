@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 var formResponseSchema = new Schema(
     {
         id: {type: String, required: true},
-        formId: {type: String, required: true},
-        timeStamp: String,
+        form_id: {type: String, required: true},
+        timestamp: String,
         values: [{
                      key: String,
                      value: String
@@ -14,4 +14,4 @@ var formResponseSchema = new Schema(
 
 var FormResponse = mongoose.model("FormResponse", formResponseSchema);
 
-module.exports = FormResponse;
+module.exports.model = FormResponse;
