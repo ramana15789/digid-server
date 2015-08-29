@@ -1,6 +1,7 @@
 # Logs
 logs
 .idea
+workspace.xml
 *.log
 
 # Runtime data
