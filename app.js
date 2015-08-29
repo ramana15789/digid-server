@@ -30,28 +30,6 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/form_field', formFields);
 
-var Field = require("./models/field.js");
-
-app.post('/field-old', function (req, res) {
-    var nameField = new Field(req);
-
-    nameField.save(function (err) {
-        if (err) {
-
-            throw err;
-        }
-        res.send('Hello World!');
-    })
-
-    console.log("test");
-});
-
-app.get('/field-old', function(req, res) {
-    console.log(req);
-    Field.find({}, function(err, fields) {
-        res.send(fields);
-    })
-})
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

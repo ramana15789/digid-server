@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Field = require("../models/field.js");
+var Field = require("../models/field.js").model;
 
 
 
