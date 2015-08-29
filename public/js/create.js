@@ -15,34 +15,51 @@ function fetchFroms() {
     return [name, age];
 }
 
-$(function() {
+$(function () {
     window.templates = {}
 
-    $.ajax({url: "../templates/field.handlebars", success : function(fieldTmp) {
-        console.log(fieldTmp);
-        templates.known_field = Handlebars.compile(fieldTmp);
-        window.knownFields = fetchFroms();
-        renderKnownFields()
-    }})
-
-
+    $.ajax({
+               url: "../templates/field.handlebars", success: function (fieldTmp) {
+            console.log(fieldTmp);
+            templates.known_field = Handlebars.compile(fieldTmp);
+            renderKnownFields()
+        }
+           })
 
 })
 
 function renderKnownFields() {
-    $.ajax({url: "../../field", success: function(fields){
-        var personal = $("#personal_fields");
-        var identity = $("#identifications_fields");
-        var visitor = $("#visiting_fields");
-        var relation = $("#relationship_fields");
+    $.ajax({
+               url: "../../field", success: function (fields) {
 
+            var personal = $("#personal_fields");
+            var identity = $("#identifications_fields");
+            var visitor = $("#visiting_fields");
+            var relation = $("#relationship_fields");
+            window.fields = {}
+            for (var i in fields) {
+                window.fields[fields[i].key] = fields[i];
+                $("#" + fields[i].group_name + "_fields").append(templates.known_field(fields[i]))
+            }
+            createSortable();
+        }
+           });
+}
 
-    }});
+function createSortable() {
+    $("#working_form").sortable({revert: true})
+    $(".source-fields")
+        .sortable({
+                      revert: true,
+                      helper: "clone",
+                      connectWith: "#working_form",
+                      start: function (event, ui) {
+                          $(".source-fields li").show();
+                      },
+                      remove: function (event, ui) {
+                          console.log($(ui.item[0]).attr("key"));
+                          $(this).sortable("cancel");
+                      }
+                  })
 
-    var knownForm = $("#personal_fields")
-    knownForm.empty()
-    for (var field in knownFields) {
-        knownForm.append(templates.known_field(knownFields[field]))
-        console.log(templates.known_field(knownFields[field]))
-    }
 }

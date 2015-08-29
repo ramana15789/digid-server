@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -90,7 +90,7 @@
                 <div class="panel-heading userProfilePanel">
                     <h3 class="panel-title">Identity</h3>
                 </div>
-                <ul id="personal_fields" class="panel-body" style="margin-top: -10px">
+                <ul id="personal_fields" class="source-fields panel-body" style="margin-top: -10px">
 
                 </ul>
             </div>
@@ -98,7 +98,7 @@
                 <div class="panel-heading userProfilePanel">
                     <h3 class="panel-title">Identity Information</h3>
                 </div>
-                <ul id="identifications_fields" class="panel-body" style="margin-top: -10px">
+                <ul id="identifications_fields" class="source-fields panel-body" style="margin-top: -10px">
                 </ul>
             </div>
         </div>
@@ -107,65 +107,22 @@
                 <div class="panel-heading userProfilePanel">
                     <h3 class="panel-title">New Form</h3>
                 </div>
-                <div class="panel-body" style="margin-top: -10px; display: block">
+                <div id="working_form" class="panel-body" style="margin-top: -10px; display: block">
 
                     <div>
-                    <div class="col-sm-11 formField">
-                        Name
-                        <span>
-                            <img src="../imgs/FilledStar.png" style="width:10px;height: 10px;">
-                        </span>
-
-                        <div class="helpText">
-                            Records the name information for participant
-                        </div>
-                    </div>
-                    <div class="col-sm-1 formField" style="text-align: right">
-                        <div>
-                            <img src="../imgs/Cross.png" class="crossImage">
-                        </div>
-                        <div>
-                            <img src="../imgs/GridIcon.png" class="dragImage">
-                        </div>
-                    </div>
-                    </div>
-                    <div>
-                    <div class="col-sm-11 formField" >Sex
-                    <span>
-                        <img src="../imgs/EmptyStar.png" style="width:10px;height: 10px;">
-                        </span>
-                        <div class="helpText">
-                            Records the gender information for participant
-                        </div>
-                    </div>
-                        <div class="col-sm-1 formField" style="text-align: right">
-                            <div>
-                                <img src="../imgs/Cross.png" class="crossImage">
-                            </div>
-                            <div>
-                                <img src="../imgs/GridIcon.png" class="dragImage">
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="col-sm-11 formField" style="display: block;">Sex
-                    <span>
-                        <img src="../imgs/EmptyStar.png" style="width:10px;height: 10px;">
-                        </span>
-                            <div class="helpText">
-                                Records the gender information for participant
-                            </div>
+                        <div class="col-sm-11 formField">
+                            Name <span class="glyphicon glyphicon-star-empty" style="width:10px;height: 10px;"></span>
+                            <div class="helpText"><input style="width:100%; border: none;outline: none;background-color: transparent;font-family: inherit;font-size: inherit;"placeholder="Records the name information for participant"></input></div>
                         </div>
                         <div class="col-sm-1 formField" style="text-align: right">
                             <div>
-                                <img src="../imgs/Cross.png" class="crossImage">
+                                <span class="glyphicon glyphicon-remove" style="width:10px;height: 10px;opacity: 0.5"></span>
                             </div>
                             <div>
-                                <img src="../imgs/GridIcon.png" class="dragImage">
+                                <span class="glyphicon glyphicon-th" style="width:10px;height: 10px;opacity: 0.5"></span>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -174,7 +131,7 @@
                 <div class="panel-heading userProfilePanel">
                     <h3 class="panel-title">Visitor Information</h3>
                 </div>
-                <ul id="visiting_fields" class="panel-body" style="margin-top: -10px">
+                <ul id="visiting_fields" class="source-fields panel-body" style="margin-top: -10px">
 
                 </ul>
             </div>
@@ -182,11 +139,8 @@
                 <div class="panel-heading userProfilePanel">
                     <h3 class="panel-title">Relational Information</h3>
                 </div>
-                <ul id="relationship_fields" class="panel-body" style="margin-top: -10px">
-                    <div class="formField">Name</div>
-                    <div class="formField">Sex</div>
-                    <div class="formField">Address</div>
-                    <div class="formField">Phone Number</div>
+                <ul id="relationship_fields" class="source-fields panel-body" style="margin-top: -10px">
+
                 </ul>
             </div>
         </div>

@@ -65,14 +65,16 @@
 }
 
 .destinationPanel .formField .dragImage {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     vertical-align: top;
     opacity: 0.6;
 }
 
 .destinationPanel .formField .helpText {
     font-size: 12px;
+    margin-top: -8px;
+    opacity: 0.6;
     padding-bottom: -1px;
     border-bottom: 1px dashed #ba0000;
 }
