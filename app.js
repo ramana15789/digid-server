@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/form_field', formFields);
+app.use('/field', formFields);
 app.use('/form', forms);
 app.use('/user_response', userResponses);
 
