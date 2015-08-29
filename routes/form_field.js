@@ -14,7 +14,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function (req, res) {
-    var field = new Field(req);
+    console.log(req);
+    var field = new Field(req.body);
     field.save(function(err){
         if(err) console.log(err);
         res.send("successfully saved");
