@@ -1,0 +1,85 @@
+.userDetail {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: -3px;
+}
+
+.userDetailHeader {
+    font-size: 12px;
+    margin-top: 10px
+}
+
+.userProfilePicture {
+    width: 50px;
+    height: 50px;
+    margin-left: -3px;
+    float: left;
+    display: block
+}
+
+.userProfilePanel {
+    height: auto;
+    overflow: hidden
+}
+
+.userProfileName {
+    padding-left: 10px;
+    margin-left: 50px;
+}
+
+.sourcePanel .formField {
+    background-color: #0D60B2;
+    margin-bottom: 10px;
+    color: #ffffff;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 5px;
+    display: block;
+}
+
+.destinationPanel{
+    background-color: lightcyan;
+}
+
+.destinationPanel .formField {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    color: #000000;
+    height: 60px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 16px;
+    display: block;
+    background-color: #ffffff;
+}
+
+.destinationPanel .formField .crossImage {
+    width: 10px;
+    height: 10px;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-right: -8px;
+}
+
+.destinationPanel .formField .dragImage {
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+    opacity: 0.6;
+}
+
+.destinationPanel .formField .helpText {
+    font-size: 12px;
+    padding-bottom: -1px;
+    border-bottom: 1px dashed #ba0000;
+}
+
+/*.fieldRow {*/
+/*display: -webkit-box;*/
+/*display: -webkit-flex;*/
+/*display: -ms-flexbox;*/
+/*display:         flex;*/
+/*}*/

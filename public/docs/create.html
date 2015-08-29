@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Theme Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../theme.css" rel="stylesheet">
+    <style>
+        .ui-draggable-dragging { background: red; }
+    </style>
+</head>
+<body>
+
+<h2>Something</h2>
+<div class="col-sm-4" >
+    <ul class="list-group" id="known_form">
+
+    </ul>
+</div><!-- /.col-sm-4 -->
+
+
+<div class="col-sm-4" >
+    <ul class="list-group" id="working_form">
+
+    </ul>
+</div><!-- /.col-sm-4 -->
+
+<script src="../js/lib/jquery.min.js"></script>
+<script src="../js/lib/jquery-ui.min.js"></script>
+<script src="../js/lib/bootstrap.min.js"></script>
+<script src="../js/lib/handlebars.js"></script>
+<script src="../js/objects.js"></script>
+<script src="../js/create.js"></script>
+
+<script id="known_field_tmp" type="text/x-handlebars-template">
+    <li class="list-group-item">
+        <div key="{{key}}"> {{label}}</div>
+    </li>
+</script>
+
+<script id="working_field_tmp" type="text/x-handlebars-template">
+    <li class="list-group-item">
+        <div key="{{key}}"> {{label}}</div>
+        <input type="checkbox"/>
+    </li>
+</script>
+
+
+
+</body>
+</html>
