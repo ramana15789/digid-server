@@ -30,6 +30,15 @@ $(function() {
 })
 
 function renderKnownFields() {
+    $.ajax({url: "../../field", success: function(fields){
+        var personal = $("#personal_fields");
+        var identity = $("#identifications_fields");
+        var visitor = $("#visiting_fields");
+        var relation = $("#relationship_fields");
+
+
+    }});
+
     var knownForm = $("#personal_fields")
     knownForm.empty()
     for (var field in knownFields) {
