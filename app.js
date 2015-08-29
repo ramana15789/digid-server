@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var formFields = require('./routes/form_field.js');
+var forms = require('./routes/form.js');
+var userResponses = require('./routes/userResponse.js');
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/digid');
@@ -28,8 +30,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/form_field', formFields);
-
+app.use('/field', formFields);
+app.use('/form', forms);
+app.use('/user_response', userResponses);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

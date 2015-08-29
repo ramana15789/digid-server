@@ -1,0 +1,264 @@
+/* 1 */
+{
+  "_id" : ObjectId("55e215b7c5486965b15513f3"),
+  "key" : "name",
+  "field_type" : "text",
+  "label" : "Name",
+  "hint" : "To capture a user's name",
+  "is_local" : true,
+  "is_mandatory" : false,
+  "group_name" : "personal",
+  "__v" : 0
+}
+
+/* 2 */
+{
+"_id" : ObjectId("55e2165abbaedcfdb5f1c107"),
+"key" : "phone_number",
+"field_type" : "text",
+"label" : "Phone Number",
+"hint" : "To capture a user's contact number",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "personal"
+}
+
+/* 3 */
+{
+"_id" : ObjectId("55e2167bbbaedcfdb5f1c108"),
+"key" : "address",
+"field_type" : "text",
+"label" : "Address",
+"hint" : "To capture a user's address",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "personal"
+}
+
+/* 4 */
+{
+"_id" : ObjectId("55e216c3bbaedcfdb5f1c109"),
+"key" : "email_id",
+"field_type" : "text",
+"label" : "E-Mail",
+"hint" : "To capture a user's email address",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "personal"
+}
+
+/* 5 */
+{
+"_id" : ObjectId("55e21704bbaedcfdb5f1c10a"),
+"key" : "gender",
+"field_type" : "boolean",
+"label" : "Gender",
+"hint" : "To capture a user's gender",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "personal"
+}
+
+/* 6 */
+{
+"_id" : ObjectId("55e2172ebbaedcfdb5f1c10b"),
+"key" : "nationality",
+"field_type" : "text",
+"label" : "Nationality",
+"hint" : "To capture a user's Nationality",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "personal"
+}
+
+/* 7 */
+{
+"_id" : ObjectId("55e217bcbbaedcfdb5f1c10c"),
+"key" : "aadhar_id",
+"field_type" : "text",
+"label" : "Aadhar Number",
+"hint" : "To capture a user's Aadhar Id",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "identifications"
+}
+
+/* 8 */
+{
+"_id" : ObjectId("55e217f0bbaedcfdb5f1c10d"),
+"key" : "pan_id",
+"field_type" : "text",
+"label" : "Pan Number",
+"hint" : "To capture a user's PAN Number",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "identifications"
+}
+
+/* 9 */
+{
+"_id" : ObjectId("55e21826bbaedcfdb5f1c10e"),
+"key" : "driver_license_id",
+"field_type" : "text",
+"label" : "Driver's License ID",
+"hint" : "To capture a user's Driving License No",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "identifications"
+}
+
+/* 10 */
+{
+"_id" : ObjectId("55e21849bbaedcfdb5f1c10f"),
+"key" : "passport_id",
+"field_type" : "text",
+"label" : "Passport Number",
+"hint" : "To capture a user's Passport Number",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "identifications"
+}
+
+/* 11 */
+{
+"_id" : ObjectId("55e21881bbaedcfdb5f1c110"),
+"key" : "visitor_name",
+"field_type" : "text",
+"label" : "Visitor Name",
+"hint" : "To capture a visitor's name",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "visiting"
+}
+
+/* 12 */
+{
+"_id" : ObjectId("55e218b4bbaedcfdb5f1c111"),
+"key" : "visitor_address",
+"field_type" : "text",
+"label" : "Visitor Address",
+"hint" : "To capture a visitor's address",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "visiting"
+}
+
+/* 13 */
+{
+"_id" : ObjectId("55e218d4bbaedcfdb5f1c112"),
+"key" : "visitor_phone",
+"field_type" : "text",
+"label" : "Visitor Phone Number",
+"hint" : "To capture a visitor's contact number",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "visiting"
+}
+
+/* 14 */
+{
+"_id" : ObjectId("55e218f6bbaedcfdb5f1c113"),
+"key" : "visitor_purpose",
+"field_type" : "text",
+"label" : "Visitor Purpose",
+"hint" : "To capture a visitor's purpose",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "visiting"
+}
+
+/* 15 */
+{
+"_id" : ObjectId("55e21925bbaedcfdb5f1c114"),
+"key" : "visitor_vehicle_number",
+"field_type" : "text",
+"label" : "Vehicle Number",
+"hint" : "To capture a visitor's vehicle number",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "visiting"
+}
+
+/* 16 */
+{
+"_id" : ObjectId("55e21958bbaedcfdb5f1c115"),
+"key" : "visitor_vehicle_type",
+"field_type" : "text",
+"label" : "Vehicle Type",
+"hint" : "To capture a visitor's vehicle type",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "visiting"
+}
+
+/* 17 */
+{
+"_id" : ObjectId("55e2198cbbaedcfdb5f1c116"),
+"key" : "father_name",
+"field_type" : "text",
+"label" : "Father's name",
+"hint" : "To capture father's number",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "relationship"
+}
+
+/* 18 */
+{
+"_id" : ObjectId("55e219a2bbaedcfdb5f1c117"),
+"key" : "mother_name",
+"field_type" : "text",
+"label" : "Mother's name",
+"hint" : "To capture mother's name",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "relationship"
+}
+
+/* 19 */
+{
+"_id" : ObjectId("55e219c3bbaedcfdb5f1c118"),
+"key" : "spouse_name",
+"field_type" : "text",
+"label" : "Spouse's name",
+"hint" : "To capture spouse's name",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "relationship"
+}
+
+/* 20 */
+{
+"_id" : ObjectId("55e21a04bbaedcfdb5f1c119"),
+"key" : "emergency_name",
+"field_type" : "text",
+"label" : "Emergency Contact's name",
+"hint" : "To capture emergency contact name",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "relationship"
+}
+
+/* 21 */
+{
+"_id" : ObjectId("55e21a49bbaedcfdb5f1c11a"),
+"key" : "emergency_phone_number",
+"field_type" : "text",
+"label" : "Emergency Contact's number",
+"hint" : "To capture emergency contact number",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "relationship"
+}
+
+/* 22 */
+{
+"_id" : ObjectId("55e21a6dbbaedcfdb5f1c11b"),
+"key" : "emergency_relation",
+"field_type" : "text",
+"label" : "Emergency Contact's relation",
+"hint" : "To capture emergency contact relationship",
+"is_local" : true,
+"is_mandatory" : false,
+"group_name" : "relationship"
+}
