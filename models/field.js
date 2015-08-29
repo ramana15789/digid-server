@@ -3,12 +3,13 @@ var Schema = mongoose.Schema;
 
 var fieldSchema = new Schema(
     {
-        key: {type: String, required: true, unique: true},
-        type: {type: String, required: true},
+        key: {type: String, required: true},
+        field_type: {type: String, required: true},
         label: String,
         hint: String,
         is_local: Boolean,
-        is_mandatory: Boolean
+        is_mandatory: Boolean,
+        group_name: String
     });
 
 var Field = mongoose.model("Field", fieldSchema);
