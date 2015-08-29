@@ -4,6 +4,8 @@ logs
 .idea/workspace.xml
 .idea/sonarIssues.xml
 *.log
+workspace.xml
+sonarIssues.xml
 
 # Runtime data
 pids
