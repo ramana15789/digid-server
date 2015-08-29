@@ -8,7 +8,8 @@ var sampleForm = {
 
 function fetchFroms() {
     var name = new Form(sampleForm)
-    sampleForm.key = age;
+    sampleForm.key = "age";
+    sampleForm.label = "Age"
 
     var age = new Form(sampleForm)
     return [name, age];
@@ -16,15 +17,20 @@ function fetchFroms() {
 
 $(function() {
     window.templates = {}
-    templates.known_field = Handlebars.compile($("#known_field_tmp").html());
-    templates.working_field = Handlebars.compile($("#working_field_tmp").html());
 
-    window.knownFields = fetchFroms();
-    renderKnownFields()
+    $.ajax({url: "../templates/field.handlebars", success : function(fieldTmp) {
+        console.log(fieldTmp);
+        templates.known_field = Handlebars.compile(fieldTmp);
+        window.knownFields = fetchFroms();
+        renderKnownFields()
+    }})
+
+
+
 })
 
 function renderKnownFields() {
-    var knownForm = $("#known_form")
+    var knownForm = $("#personal_fields")
     knownForm.empty()
     for (var field in knownFields) {
         knownForm.append(templates.known_field(knownFields[field]))
