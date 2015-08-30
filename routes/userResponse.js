@@ -16,7 +16,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res) {
-    console.log(req);
+    console.log(req.body);
     var field = new UserResponse(req.body);
     field.save(function (err) {
         if (err) {

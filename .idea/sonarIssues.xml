@@ -48,7 +48,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/public/js/lib/qrcode.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/public/js/objects.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/public/js/report.js">
           <value>
             <set />
           </value>
