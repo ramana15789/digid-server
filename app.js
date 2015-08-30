@@ -9,7 +9,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var formFields = require('./routes/form_field.js');
 var forms = require('./routes/form.js');
-var userResponses = require('./routes/userResponse.js');
+var responses = require('./routes/response.js');
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://heroku_c1jhz5pp:u8685n5d92qkr9l0voqlafjg69@ds035533.mongolab.com:35533/heroku_c1jhz5pp');
@@ -33,7 +33,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/field', formFields);
 app.use('/form', forms);
-app.use('/user_response', userResponses);
+app.use('/response', responses);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

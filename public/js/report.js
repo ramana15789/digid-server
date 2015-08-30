@@ -14,15 +14,11 @@ $(function () {
     templates.row_field = Handlebars.compile($("#row-template").html());
     renderTable();
 
-
-
-
-
 })
 
 function renderTable() {
     $.ajax({
-               url: "../../form?id=853347", success: function (form) {
+               url: "../../form?id="+getParameterByName("form_id"), success: function (form) {
             var formTmp = templates.table_field(form);
             console.log(formTmp);
             $("#report").append(formTmp);
@@ -33,14 +29,21 @@ function renderTable() {
 
 function renderRows() {
     $.ajax({
-        url: "../../user_response?form_id=853347",
-        success: function(response) {
-            console.log(response)
-        }
+        url: "../../response?form_id="+getParameterByName("form_id"),
+        success: function(fields) {
+            console.log(fields)
+            for (var x=0; x < fields.length; x++) {
+                $("#report_rows").append(templates.row_field(fields[x]))
+            }
 
+        }
            })
 }
 
+function getParameterByName(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
 
 
 
