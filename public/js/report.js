@@ -39,7 +39,7 @@ function renderRows(firstTime) {
             fields.reverse()
             if (!firstTime)  {
                if (fields.length > window.lastLoadNum) {
-                   $("#alert").show().delay(2000).fadeOut()
+                   $("#alert").slideDown().delay(2000).slideUp()
                }
                else {
                    return;
