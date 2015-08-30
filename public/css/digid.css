@@ -39,7 +39,7 @@
     display: block;
 }
 
-.destinationPanel{
+.destinationPanel {
     background-color: lightcyan;
 }
 
@@ -77,6 +77,33 @@
     opacity: 0.6;
     padding-bottom: -1px;
     border-bottom: 1px dashed #ba0000;
+}
+
+.destinationPanel .formName {
+    width: 70%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color:white;
+    font-family: inherit;
+    font-size: inherit;
+    border-bottom: 1px solid #ffffff;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.destinationPanel .formName input {
+    color: #ffffff;
+}
+
+.destinationPanel .formName::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.surveyHeading{
+    font-weight: 500;
+    font-size: 25px;
 }
 
 /*.fieldRow {*/
