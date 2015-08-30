@@ -10,7 +10,7 @@ var formSchema = new Schema(
         fields: [fieldSchema]
     });
 
-var Form = mongoose.model("UserResponse", formSchema);
+var Form = mongoose.model("Form", formSchema);
 
 module.exports.model = Form;
 module.exports.schema = formSchema;

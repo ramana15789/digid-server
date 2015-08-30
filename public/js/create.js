@@ -108,7 +108,7 @@ function saveForm() {
     }
     console.log(saveFields);
     var req = {}
-    req.id = "dasdfsadsafdfsa";
+    req.id = Math.floor(Math.random() * (1000000 - 0 + 1)) + 0;
     req.name = $("#name_form").val();
     req.success_message = $("#name_form").val();
     req.fields = saveFields;
@@ -117,7 +117,10 @@ function saveForm() {
                url: "../../form",
                type: "POST",
                data: JSON.stringify(req),
-               success: function(a,b){console.log(b)},
+               success: function(a,b){
+                   console.log(b)
+                   alert("b" + req.id)
+               },
                contentType:"application/json; charset=utf-8",
                dataType:"json"
            });

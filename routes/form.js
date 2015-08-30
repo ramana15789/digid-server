@@ -16,14 +16,16 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res) {
-    console.log(req);
-    var field = new Form(req.body);
-    field.save(function (err) {
+    console.log(req.body);
+    var form = new Form(req.body);
+    form.save(function (err) {
         if (err) {
             console.log(err);
             res.send(err);
         }
-        res.send("successfully saved");
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({ msg: "success" }));
+
     })
 })
 

@@ -12,7 +12,8 @@ var forms = require('./routes/form.js');
 var userResponses = require('./routes/userResponse.js');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://heroku_c1jhz5pp:u8685n5d92qkr9l0voqlafjg69@ds035533.mongolab.com:35533/heroku_c1jhz5pp');
+//mongoose.connect('mongodb://heroku_c1jhz5pp:u8685n5d92qkr9l0voqlafjg69@ds035533.mongolab.com:35533/heroku_c1jhz5pp');
+mongoose.connect('mongodb://localhost/digid');
 
 var app = express();
 
