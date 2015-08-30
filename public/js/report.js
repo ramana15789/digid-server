@@ -14,7 +14,7 @@ $(function () {
     templates.row_field = Handlebars.compile($("#row-template").html());
     renderTable();
     $("#alert").hide()
-    $("#show").hide()
+    $("#cards").hide()
     window.setInterval(function(){
         renderRows(false);
     }, 2500)
