@@ -41,6 +41,7 @@
 
 .destinationPanel {
     background-color: lightcyan;
+    min-height: 600px;
 }
 
 .destinationPanel .formField {
