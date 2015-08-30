@@ -26,7 +26,7 @@ function renderTable() {
             var formTmp = templates.table_field(form);
             console.log(formTmp);
             $("#report").append(formTmp);
-            renderRows()
+            renderRows(true)
         }
            });
 }
