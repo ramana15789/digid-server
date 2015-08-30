@@ -3,7 +3,6 @@ var Schema = mongoose.Schema;
 
 var formResponseSchema = new Schema(
     {
-        id: {type: String, required: true},
         form_id: {type: String, required: true},
         timestamp: String,
         values: [{
