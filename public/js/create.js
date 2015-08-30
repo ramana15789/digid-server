@@ -54,7 +54,6 @@ function createSortable() {
                           $(".source-fields li").show();
                       },
                       remove: function (event, ui) {
-                          console.log($(ui.item[0]).attr("key"));
                           $(this).sortable("cancel");
                           var field = window.fields[$(ui.item[0]).attr("key")];
                           if (!window.formFields[field.key]) {
@@ -107,7 +106,7 @@ function saveForm() {
         field.is_mandatory = $(fields[x]).find(".is_mandatory").length > 0
         saveFields.push(field)
     }
-    console.log(saveFields);
+
     var req = {}
     req.id = Math.floor(Math.random() * (1000000 - 0 + 1)) + 0;
     req.name = $("#name_form").val();
@@ -119,7 +118,7 @@ function saveForm() {
                type: "POST",
                data: JSON.stringify(req),
                success: function(a,b){
-                   console.log(b)
+
                    $("#qrcode").show();
                    $("#qrcode a").html(req.id);
                    $("#qrcode a").attr("href", "./adminReporting.html?form_id="+req.id)

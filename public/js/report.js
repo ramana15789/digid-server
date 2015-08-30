@@ -25,7 +25,7 @@ function renderTable() {
                url: "../../form?id="+getParameterByName("form_id"), success: function (form) {
             var formTmp = templates.table_field(form);
             $("#form_name").html(form.name)
-            console.log(formTmp);
+
             $("#report").append(formTmp);
             renderRows(true)
         }
@@ -37,7 +37,6 @@ function renderRows(firstTime) {
         url: "../../response?form_id="+getParameterByName("form_id"),
         success: function(fields) {
             fields.reverse()
-            console.log(fields)
             if (!firstTime)  {
                if (fields.length > window.lastLoadNum) {
                    $("#alert").show().delay(2000).fadeOut()
