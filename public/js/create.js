@@ -22,7 +22,7 @@ $(function () {
     renderKnownFields();
 
     $("#create_form").click(function(){saveForm()})
-
+    $("#qrcode").hide();
 
 
 })
@@ -120,6 +120,7 @@ function saveForm() {
                data: JSON.stringify(req),
                success: function(a,b){
                    console.log(b)
+                   $("#qrcode").show();
                    $("#qrcode a").html(req.id);
                    $("#qrcode a").attr("href", "./adminReporting.html?form_id="+req.id)
                    $('#qrcode img').attr('src', 'https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=' + req.id + '&choe=UTF-8');
