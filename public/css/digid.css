@@ -55,6 +55,10 @@
     font-size: 16px;
     display: block;
     background-color: #ffffff;
+    /*background-image: url("../imgs/GridIcon.png");*/
+    /*background-size: 15px 15px;*/
+    /*background-position: right center; *//*Positioning*/
+    /*background-repeat: no-repeat;*/
 }
 
 .destinationPanel .formField .crossImage {
