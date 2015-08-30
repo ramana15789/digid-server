@@ -23,7 +23,8 @@ router.post('/', function (req, res) {
             console.log(err);
             res.send(err);
         }
-        res.send("successfully saved");
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({ msg: "success" }));
     })
 })
 
