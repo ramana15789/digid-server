@@ -167,3 +167,5 @@
 .destinationPanel .button.turquoise {
     background: #1abc9c;
 }
+
+.nav-tabs li:nth-child(2) {margin-right: 10px;}
