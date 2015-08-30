@@ -9,7 +9,8 @@ var fieldSchema = new Schema(
         hint: String,
         is_local: Boolean,
         is_mandatory: Boolean,
-        group_name: String
+        group_name: String,
+        options: [String]
     });
 
 var Field = mongoose.model("Field", fieldSchema);
