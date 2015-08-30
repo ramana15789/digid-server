@@ -24,6 +24,7 @@ function renderTable() {
     $.ajax({
                url: "../../form?id="+getParameterByName("form_id"), success: function (form) {
             var formTmp = templates.table_field(form);
+            $("#form_name").html(form.name)
             console.log(formTmp);
             $("#report").append(formTmp);
             renderRows(true)
