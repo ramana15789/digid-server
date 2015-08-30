@@ -74,8 +74,8 @@ function makeWorkingSortable() {
         $(this).parent().parent().parent().remove();
     })
     $("#working_form").disableSelection()
+    $(".mandatory-btn").off("click")
     $(".mandatory-btn").click(function() {
-        console.log(this)
         if($(this).is(".is_mandatory")) {
             $(this).removeClass("glyphicon-star")
             $(this).removeClass("is_mandatory")
