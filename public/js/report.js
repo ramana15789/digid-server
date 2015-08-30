@@ -13,7 +13,11 @@ $(function () {
     templates.table_field = Handlebars.compile($("#table-template").html());
     templates.row_field = Handlebars.compile($("#row-template").html());
     renderTable();
-
+    $("#alert").hide()
+    $("#show").hide()
+    window.setInterval(function(){
+        renderRows(false);
+    }, 2500)
 })
 
 function renderTable() {
@@ -27,15 +31,22 @@ function renderTable() {
            });
 }
 
-function renderRows() {
+function renderRows(firstTime) {
     $.ajax({
         url: "../../response?form_id="+getParameterByName("form_id"),
         success: function(fields) {
+            fields.reverse()
             console.log(fields)
+            if (!firstTime)  {
+               if (fields.length > window.lastLoadNum) {
+                   $("#alert").show().delay(2000).fadeOut()
+               }
+            }
+            window.lastLoadNum = fields.length;
+
             for (var x=0; x < fields.length; x++) {
                 $("#report_rows").append(templates.row_field(fields[x]))
             }
-
         }
            })
 }
