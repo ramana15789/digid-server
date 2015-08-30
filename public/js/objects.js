@@ -6,12 +6,11 @@ function Person(name, age, sex) {
 
 function Form(parameters) {
     this.key = parameters.key;
-    this.type = parameters.type;
-    this.inputType = parameters.inputType;
+    this.field_type = parameters.field_type;
     this.label = parameters.label;
     this.hint = parameters.hint;
-    this.isMandatory = parameters.isMandatory;
-
+    this.is_mandatory = parameters.is_mandatory;
+    this.is_local = parameters.is_local;
 }
 
 function Response(parameters) {

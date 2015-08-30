@@ -50,7 +50,7 @@
         <div class="col-sm-3">
             <div class="panel panel-info sourcePanel">
                 <div class="panel-heading userProfilePanel">
-                    <h3 class="panel-title">Identity</h3>
+                    <h3 class="panel-title">Personal</h3>
                 </div>
                 <ul id="personal_fields" class="source-fields panel-body" style="margin-top: -10px">
 
@@ -67,24 +67,12 @@
         <div class="col-sm-6">
             <div class="panel panel-primary destinationPanel">
                 <div class="panel-heading userProfilePanel">
-                    <h3 class="panel-title">New Form</h3>
+                    <h3 class="panel-title">
+                        <input id="name_form" type="text" style="color: #000000" placeholder="Name of Form"/>
+                        <button id="create_form" type="submit" style="float: right" class="btn btn-default">Create Form</button>
+                    </h3>
                 </div>
                 <div id="working_form" class="panel-body" style="margin-top: -10px; display: block">
-
-                    <div>
-                        <div class="col-sm-11 formField">
-                            Name <span class="glyphicon glyphicon-star-empty" style="width:10px;height: 10px;"></span>
-                            <div class="helpText"><input style="width:100%; border: none;outline: none;background-color: transparent;font-family: inherit;font-size: inherit;"placeholder="Records the name information for participant"></input></div>
-                        </div>
-                        <div class="col-sm-1 formField" style="text-align: right">
-                            <div>
-                                <span class="glyphicon glyphicon-remove" style="width:10px;height: 10px;opacity: 0.5"></span>
-                            </div>
-                            <div>
-                                <span class="glyphicon glyphicon-th" style="width:10px;height: 10px;opacity: 0.5"></span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -125,5 +113,27 @@
 <script src="../js/create.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+
+<script id="field-template" type="text/x-handlebars-template">
+    <li class="formField" key="{{key}}">{{label}}</li>
+</script>
+
+<script id="form-template" type="text/x-handlebars-template">
+    <div>
+        <div class="col-sm-11 formField fieldKey" key="{{key}}">
+            {{label}} <span class="mandatory-btn glyphicon glyphicon-star-empty" style="cursor:pointer; width:10px;height: 10px;"></span>
+            <div class="helpText"><input style="width:100%; border: none;outline: none;background-color: transparent;font-family: inherit;font-size: inherit;"placeholder="{{hint}}"/></div>
+        </div>
+        <div class="col-sm-1 formField" style="text-align: right">
+            <div>
+                <span class="glyphicon glyphicon-remove remove-btn" style="width:10px;height: 10px;opacity: 0.5"></span>
+            </div>
+            <div>
+                <span class="glyphicon glyphicon-th holder" style="width:10px;height: 10px;opacity: 0.5"></span>
+            </div>
+        </div>
+    </div>
+</script>
+
 </body>
 </html>
